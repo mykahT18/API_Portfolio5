@@ -20,5 +20,7 @@ label{
 }
 .mainContainer{
 	display: flex;
-
+}
+footer{
+    margin-top: 1rem;
 }
