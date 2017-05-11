@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.navBar{
+	background-color: #247BA0; 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.navList{
+	display: flex;
+	justify-content: space-between;
+
+}
+img{
+	width: 10%;
+}
+a{
+	color: #F8F9F8;
+}
