@@ -17,8 +17,7 @@ body {
 }
 .homeContentContainer p, h1{
 	text-align: center;
-	padding: 2rem;
-
+	padding: 1rem;
 }
 li{
 	margin-right: 2rem;
@@ -42,9 +41,28 @@ footer p{
 a{
 	color: #F8F9F8;
 }
-
 @media only screen and (min-width: 320px) {
     img {
         width: 42px;
     }
+}
+.searchForm{
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+}
+.searchBox{
+	outline: none;
+	border: none;
+	padding: 1rem;
+}
+.subContainer{
+	background-color: #3A3E4B;
+	padding: 2.5rem;
+
+}
+.submitBtn{
+	outline: none;
+	padding: 1.1rem;
+	margin-left: 1rem;
 }
