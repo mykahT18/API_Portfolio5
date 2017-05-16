@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import Search from './Search';
+import Bestseller from './Bestseller';
 
 class Main extends Component{
 	render(){
 		return(
 			<section className="homeContentContainer">
-				<h1>Welcome!</h1>
-				<p>Search for any book!</p>
-				<Search/>
+				<div className="asideCon">
+					<h1>Welcome! Search for any book!</h1>
+					<Search/>
+					<Bestseller/>
+				</div>
 			</section>
 		)
 	}

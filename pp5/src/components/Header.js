@@ -9,7 +9,7 @@ class Header extends Component{
 					<img src={Bookmarks} alt=""/>
 					<ul className="navList">
 						<li><a href="#">Home</a></li>
-						<li><a href="#">Reading List</a></li>
+						<li><a href="#">My Library</a></li>
 					</ul>
 				</nav>
 			</header>
