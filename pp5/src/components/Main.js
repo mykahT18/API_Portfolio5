@@ -7,10 +7,14 @@ class Main extends Component{
 		return(
 			<section className="homeContentContainer">
 				<div className="asideCon">
-					<h1>Welcome! Search for any book!</h1>
 					<Search/>
-					<Bestseller/>
+					<Bestseller />
 				</div>
+				<div className="details">
+						<p id="book">Find a new book to read</p>
+						<p id="review">Read the reviews </p>
+						<p id="plus">Add to your reading list</p>
+					</div>
 			</section>
 		)
 	}

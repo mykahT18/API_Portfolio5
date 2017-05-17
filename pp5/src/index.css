@@ -4,29 +4,11 @@ body {
   font-family: sans-serif;
   background-color: #EAEFEE;
 }
-.navBar{
-	background-color: #3A3E4B; 
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-}
-.navList{
-	display: flex;
-}
-.homeContentContainer p, h1{
-	text-align: center;
-	padding: 2rem;
-}
-.asideCon{
-	display: flex;
-	justify-content: space-around;
-}
-li{
+.navBar li{
 	margin-right: 2rem;
 	padding: 2rem;
 }
-li:hover{
+.navBar li:hover{
 	background-color: #539FC6;
 }
 img{
@@ -49,23 +31,63 @@ a{
         width: 42px;
     }
 }
+.navBar{
+	background-color: #3A3E4B; 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.mainContainer{
+	background-color: #FAFBFC;
+	flex-basis: 35%;
+	padding: 1rem;
+}
+.bestResults h1{
+	text-align: left;
+	padding: 1rem 0rem 0rem 0rem;
+}
+.navList{
+	display: flex;
+}
+.homeContentContainer p, h1{
+	text-align: center;
+	padding: 2rem;
+}
+.asideCon{
+	display: flex;
+	justify-content: space-between;
+}
+.subNav{
+	display: flex;
+	justify-content: space-between;
+	background-color: #B2C1D1;
+    padding: 1rem;
+}
+.searchContainer{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 70%;
+}
+.searchContainer h1{
+	padding-top: 4.2rem;
+    padding-bottom: 4rem;
+}
 .searchForm{
 	display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-	flex-basis: 74%;
-	padding: 2rem;
 }
 .searchBox{
 	background-color: #3A3E4B;
 	outline: none;
 	border: none;
-	padding: 1rem;
+	padding: 1.6rem;
 	color: #F8F9F8;
     box-shadow: 2px 2px 12px #888888;
 	border-radius: 3px;
-	    flex-basis: 40%;
+	width: 60%;
 }
 .submitBtn{
 	background-image: url(search.svg);
@@ -75,13 +97,41 @@ a{
 	background-color: #539FC6;
 	box-shadow: 2px 2px 12px #888888;
 	outline: none;
+	width: 12%;
 	border-radius: 3px;
-	padding: 2rem;
 	padding-top: 1rem;
-    padding-bottom: 2.1rem;
+    padding-bottom: 3.3rem;
     padding-left: 0.8rem;
     padding-right: 4rem;
 }
-.mainContainer{
-	background-color: #FAFBFC;
+.details{
+	display: flex;
+	flex-direction: column;
+	width: 49%;
+	margin-left: 8rem;
+    margin-top: 5rem;
+}
+/*Icons on the homepage*/
+#book{
+	background-image: url('book.svg');
+	background-repeat: no-repeat;
+	text-indent: -22rem;
+    background-position: 4.5rem 1rem;
+	background-size: 2rem;
+	
+}
+#review{
+	background-image: url('review.svg');
+	background-repeat: no-repeat;
+	text-indent: -25rem;
+    background-position: 4.5rem 1rem;
+	background-size: 2rem;
+	
+}
+#plus{
+	background-image: url('add.svg');
+	background-repeat: no-repeat;
+	text-indent: -22.6rem;
+    background-position: 4.5rem 1.3rem;
+	background-size: 2rem;
 }
