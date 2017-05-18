@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 
 const urlForRequest = request =>
 	`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=a76746f5c0b94c5c90c10cb55d5766a1`
@@ -41,14 +48,15 @@ class Bestseller extends Component{
 			</ul>
 			<section className="bestResults">
 				<h1>This week:</h1>
-				{Object.keys(this.state.result).map((list,idx)=>{
-						console.log(this.state.result[list].title);
-						return 	<div>
-									<h1 key={idx}>{this.state.result[list].title}</h1>
-									<h2 key={idx}>{this.state.result[list].author}</h2>
+				<article className="bookItemsContainer">
+					{Object.keys(this.state.result).map((list,idx)=>{
+						return 	<div className="bk-sub-contanier" key={idx+1}>
+									<img key={idx+4} src={this.state.result[list].book_image}/>
+									<h1 key={idx+2}>{this.state.result[list].title}</h1>
+									<h2 key={idx+3}>{this.state.result[list].author}</h2>
 								</div>
-
-				})}
+					})}
+				</article>
 			</section>
 
 			</aside>

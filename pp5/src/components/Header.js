@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import Bookmarks from '../bookmarks.svg';
-
+import { NavLink } from 'react-router-dom';
 class Header extends Component{
 	render(){
 		return(
 			<header>
 				<nav className="navBar">
-					<img src={Bookmarks} alt=""/>
 					<ul className="navList">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">My Library</a></li>
+						<li><NavLink to="/">Home</NavLink></li>
+						<li><NavLink to="/components/Library">My Library</NavLink></li>
 					</ul>
 				</nav>
 			</header>

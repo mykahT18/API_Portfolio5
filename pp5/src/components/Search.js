@@ -10,6 +10,11 @@ class Search extends Component{
 						<input type="text" className="searchBox" placeholder="Harry Potter"/>
 						<button className="submitBtn"></button>
 				</form>
+				<div className="details">
+						<p id="book">Find a new book to read</p>
+						<p id="review">Read the reviews </p>
+						<p id="plus">Add to your reading list</p>
+				</div>
 			</div>
 		)
 	}
