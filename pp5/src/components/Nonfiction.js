@@ -1,16 +1,10 @@
+
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 
-let hard = "hardcover-fiction";
 const urlForRequest = request =>
-	`https://api.nytimes.com/svc/books/v3/lists/current/${hard}.json?api-key=a76746f5c0b94c5c90c10cb55d5766a1`
+	`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-Nonfiction.json?api-key=a76746f5c0b94c5c90c10cb55d5766a1`
 
-class Bestseller extends Component{
+class Nonfiction extends Component{
 	constructor(props){
 		super(props)
 		this.state = {
@@ -36,7 +30,6 @@ class Bestseller extends Component{
 
 	}
 	render(){
-		if(!this.state.result) return <p>Loading.....</p>
 		return(
 			<aside className="mainContainer">
 			<h1>The New York Bestsellers</h1>
@@ -58,9 +51,8 @@ class Bestseller extends Component{
 					})}
 				</article>
 			</section>
-
-			</aside>
+		</aside>
 		)
 	}
 }
-export default Bestseller;
+export default Nonfiction;

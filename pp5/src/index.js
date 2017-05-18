@@ -10,13 +10,15 @@ import {
 } from 'react-router-dom';
 import Library from './components/Library';
 import Header from './components/Header';
+import Results from './components/Results';
 const Root = () => {
   return(
     <Router>
     	<div>
     		<Route exact path="/" component={App} />
     		<Route path="/components/Library" component={Library} />
-		</div>
+        <Route path="/components/Results" component={Results} />
+		  </div>
     </Router>
 
     )

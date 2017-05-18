@@ -5,17 +5,7 @@ class Library extends Component{
 		return(
 			<div>
 				<Header/>
-				<h1>HELLO WORLD!</h1>
-				<h1>HELLO WORLD!</h1>
-				<h1>HELLO WORLD!</h1>
-				<h1>HELLO WORLD!</h1>
-				<h1>HELLO WORLD!</h1>
-
-				<h1>HELLO WORLD!</h1>
-				<h1>HELLO WORLD!</h1>
-				<h1>HELLO WORLD!</h1>
-				<h1>HELLO WORLD!</h1>
-				<h1>HELLO WORLD!</h1>
+				
 
 			</div>
 		)
