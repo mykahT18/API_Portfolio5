@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 const urlForRequest = request =>
-	`https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=a76746f5c0b94c5c90c10cb55d5766a1
-	list=hardcover-fiction`
+	`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=a76746f5c0b94c5c90c10cb55d5766a1`
 
 class Bestseller extends Component{
 	constructor(props){
@@ -19,8 +18,8 @@ class Bestseller extends Component{
 		.then(data => data.json())
 		.then(data => {
 			this.setState({
-				result: data.results.lists,
-				num_results: 10
+				result: data.results.books
+			
 			})
 		}), ()=>{
 			this.setState({
@@ -35,18 +34,19 @@ class Bestseller extends Component{
 			<aside className="mainContainer">
 			<h1>The New York Bestsellers</h1>
 			<ul className="subNav">
-				<li>Fiction</li>
-				<li>NonFiction</li>
-				<li>Young Adult</li>
-				<li>Children</li>
+				<li><a href="#">Fiction</a></li>
+				<li><a href="#">NonFiction</a></li>
+				<li><a href="#">Young Adult</a></li>
+				<li><a href="#">Children</a></li>
 			</ul>
 			<section className="bestResults">
 				<h1>This week:</h1>
-				{Object.keys(this.state.result).map((list)=>{
-					return Object.keys(this.state.result[list].books).map((book,idx)=>{
-						console.log(this.state.result[list].books[book].title);
-						return <p key={idx}>Key: {idx}, Title: {this.state.result[list].books[book].title}</p>;
-					})
+				{Object.keys(this.state.result).map((list,idx)=>{
+						console.log(this.state.result[list].title);
+						return 	<div>
+									<h1 key={idx}>{this.state.result[list].title}</h1>
+									<h2 key={idx}>{this.state.result[list].author}</h2>
+								</div>
 
 				})}
 			</section>
