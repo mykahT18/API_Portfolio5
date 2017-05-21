@@ -26,7 +26,7 @@ class Bestseller extends Component{
 		.then(data => {
 			this.setState({
 				result: data.results.books
-			
+				
 			})
 		}), ()=>{
 			this.setState({
@@ -49,11 +49,12 @@ class Bestseller extends Component{
 			<section className="bestResults">
 				<h1>This week:</h1>
 				<article className="bookItemsContainer">
-					{Object.keys(this.state.result).map((list,idx)=>{
-						return 	<div className="bk-sub-contanier" key={idx+1}>
-									<img key={idx+4} src={this.state.result[list].book_image}/>
-									<h1 key={idx+2}>{this.state.result[list].title}</h1>
-									<h2 key={idx+3}>{this.state.result[list].author}</h2>
+					{Object.keys(this.state.result).map((idx)=>{
+						// console.log(this.state.result[idx]);
+						return 	<div className="bk-sub-contanier" key={idx}>
+									<img src={this.state.result[idx].book_image}/>
+									<h1>{this.state.result[idx].title}</h1>
+									<h2>{this.state.result[idx].author}</h2>
 								</div>
 					})}
 				</article>
