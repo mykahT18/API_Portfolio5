@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Search from './Search';
 class Results extends Component{
+	constructor(props){
+		super(props);
+		
+		
+	}
 	render(){
 		return(
 			<div className="results-container">
 				<Header/>
-				<Search/>
+				<Search />
 				<div className="result-header">
 					<h1>Results for Harry Potter: (7)</h1>
 				</div>
