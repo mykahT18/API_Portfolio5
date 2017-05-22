@@ -1,24 +1,24 @@
 import React, { Component, PropTypes } from 'react';
 
-
+import { googleBookApi } from '../Helpers';
 class Search extends Component{
 	constructor(props){
-		super(props);
-		this.value = '';
+		super(props)
+		this.value = "";
 	}
 	handleClick(e){
 		e.preventDefault();
-		
-		this.value = this.refs.input.value;
-		console.log(this.refs.input.value);
-		this.context.router.history.push('/components/Results');
+		const value = this.searchInput.value;
+		// console.log(this.searchInput.value);
+		googleBookApi(value);
+		this.context.router.history.push(`/components/Results/${value}`);
 	}
 	render(){
 		return(
 			<div className="searchContainer">
 				<h1>Welcome! Search for any book!</h1>
-				<form className="searchForm" onSubmit={this.handleClick.bind(this)}>
-						<input ref="input" type="text" className="searchBox" placeholder="Harry Potter"/>
+				<form className="searchForm" onSubmit={ (e) => this.handleClick(e)}>
+						<input ref={ (input) => {this.searchInput = input}} type="text" className="searchBox" placeholder="Harry Potter"/>
 						<button className="submitBtn"></button>
 				</form>
 				<div className="details">
