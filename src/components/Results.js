@@ -3,9 +3,10 @@ import Header from './Header';
 import Search from './Search';
 
 import { googleBookApi } from '../Helpers';
+import { reviewsApi } from '../Helpers';
 
 class Results extends Component{
-
+ // console.log(reviewsApi(this.props.match.params.value))
 	render(){
 		return(
 			<div className="results-container">
@@ -13,6 +14,7 @@ class Results extends Component{
 				<Search />
 				<div className="result-header">
 					<h1>Results: {this.props.match.params.value}</h1>
+					
 				</div>
 				<article className="card">
 						
