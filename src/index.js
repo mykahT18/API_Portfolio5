@@ -9,7 +9,7 @@ import {
   NavLink
 } from 'react-router-dom';
 import Library from './components/Library';
-import Header from './components/Header';
+
 import Results from './components/Results';
 const Root = () => {
   return(

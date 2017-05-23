@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Link
+// } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 let hard = "hardcover-fiction";
 const urlForRequest = request =>

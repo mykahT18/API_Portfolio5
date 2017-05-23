@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://mykaht18.github.io/API_Portfolio5/",
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

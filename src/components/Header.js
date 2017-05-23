@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Bookmarks from '../bookmarks.svg';
+
 import { NavLink } from 'react-router-dom';
 class Header extends Component{
 	render(){
