@@ -9,7 +9,6 @@ class Main extends Component{
 			<section className="homeContentContainer">
 				<div className="asideCon">
 					<Search />
-					
 				</div>
 			</section>
 		)

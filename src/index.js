@@ -10,14 +10,14 @@ import {
 } from 'react-router-dom';
 import Library from './components/Library';
 
-import Results from './components/Results';
+
 const Root = () => {
+  
   return(
     <Router>
     	<div>
     		<Route exact path="/" component={App} />
     		<Route path="/components/Library" component={Library} />
-        <Route path="/components/Results/:value" component={Results} />
 		  </div>
     </Router>
 

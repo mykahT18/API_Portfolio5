@@ -6,7 +6,6 @@ class Library extends Component{
 			<div>
 				<Header/>
 				
-
 			</div>
 		)
 	}

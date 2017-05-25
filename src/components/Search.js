@@ -4,17 +4,16 @@ import { googleBookApi } from '../Helpers';
 class Search extends Component{
 	constructor(props){
 		super(props);
-		// this.value = "";
 		this.state = {
 			book: {},
 			showResults: false,
-			myBooks: []
+			badReq: false,
+			myBooks: [],
 		};
 	}
 	handleClick(e){
 		e.preventDefault();
 		const value = this.searchInput.value;
-		// console.log(this.searchInput.value);
 		let temp = "";
 		fetch("https://www.googleapis.com/books/v1/volumes?q=" + value)
 		.then(data => data.json())
@@ -26,16 +25,26 @@ class Search extends Component{
 			})
 	    })
 	  	.catch(function(error) {
-	    	console.log("REQUEST WAS BAD");
+	    	alert("Search not found. Please try again.")
 	  	});   
 	}
 	addBook(e){
-		
 		e.preventDefault();
-		console.log(this.input)
-		let show = this.input.getAttribute("data-btn");
-		console.log(show);
+		console.log(e.currentTarget);
+		let targetBtn = e.currentTarget.getAttribute("data-btn");
+		console.log(this.state.book[targetBtn].volumeInfo.title);
 		
+		console.log("-------Adding to temp variable object here-------");
+		var tempBook = {
+			title: this.state.book[targetBtn].volumeInfo.title,
+			author: this.state.book[targetBtn].volumeInfo.authors
+		}
+		
+		this.setState({
+			myBooks: [...this.state.myBooks, tempBook]
+		})
+		console.log(this.state.myBooks);
+
 	}
 	renderResults(){
 		if(this.state.showResults){
@@ -52,11 +61,10 @@ class Search extends Component{
 										<h1>{this.state.book[idx].volumeInfo.title}</h1>
 										<h2>By {this.state.book[idx].volumeInfo.authors}</h2>
 										<p>Published: {this.state.book[idx].volumeInfo.publishedDate}</p>
-										<input ref={ (input) =>{this.input = input}} data-btn={idx} onClick={ (e) => this.addBook.bind(e)} type="submit" value="Add"/>
+										<button className="btnAdd" ref={ (input) =>{this.input = input}} data-btn={idx} onClick={this.addBook.bind(this)}>Add</button>
 									</div>
 								</article>
 						})}
-					
 				</div>
 				);
 		} return(

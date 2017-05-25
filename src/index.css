@@ -19,6 +19,15 @@ img{
 	width: 30%;
 
 }
+/*-------Classes and ID's-----------*/
+.btnAdd{
+	background-image: url(add.svg);
+	background-repeat: no-repeat;
+	background-color: transparent;
+    padding: 0.5rem;
+    color: transparent;
+    margin: 1rem 0rem 0rem 10rem;
+}
 .navBar{
 	background-color: #3A3E4B; 
 	display: flex;
@@ -38,9 +47,12 @@ img{
 .results-container{
 	display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .navList{
 	display: flex;
+	flex-wrap: wrap;
+    align-items: flex-end;
 }
 .homeContentContainer p, h1{
 	text-align: center;
@@ -64,6 +76,7 @@ img{
 .card img{
 	padding-bottom: 1rem;
     width: 100%;
+    padding-left: 0rem;
 }
 .card p {
 	padding-top: 0.5rem;
@@ -74,9 +87,9 @@ img{
 	background-color:#D8DDE6;
 	box-shadow: 0px 0px 10px #888888;
 	padding: 0.8rem;
-	width: 13%;
+	flex-basis: 10%;
 	margin-top: 2rem;
-	margin-left: 1rem;
+	margin-left: 2rem;
 }
 .text-info{
 	margin-left: 1rem;
@@ -138,11 +151,13 @@ img{
 	display: flex;
 	flex-direction: column;
 	margin-left: 14rem;
-   
+
+	
 }
 .navBar li{
 	margin-right: 2rem;
 	padding: 2rem;
+	flex-basis: 10%;
 }
 .navBar li:hover{
 	background-color: #539FC6;
@@ -188,3 +203,182 @@ img{
     background-position: 4.5rem 1.3rem;
 	background-size: 2rem;
 }
+
+/*-----------Media Queries---------*/
+@media only screen and (min-width: 320px) {
+    #book {
+        text-indent: 1rem;
+        background-position: 2rem 1rem
+    }
+    #review {
+        text-indent: -2rem;
+    	background-position: 2rem 1rem;
+    } 
+    #plus {
+        text-indent: 1rem;
+    	background-position: 2.1rem 1.3rem;
+    } 
+    .details {
+        margin-left: 0rem;
+    }
+     .searchForm {
+        padding-bottom: 2rem;
+    }
+      .navBar li {
+	    margin-left: 2.2rem;
+	    margin-right: 1rem;
+	    padding-top: 0.5rem;
+	    padding: 0.5rem;
+	    flex-basis: 10%;
+	    align-self: center;
+    } 
+}
+
+@media only screen and (min-width: 414px) {
+    #book {
+		text-indent: -2rem;
+        background-position: 3rem 1rem
+    }
+    #review {
+    	 text-indent: -4.8rem;
+    	background-position: 3rem 1rem;
+    } 
+     #plus {
+    	text-indent: -1.9rem;
+    	background-position: 3.1rem 1.3rem;
+    } 
+}
+@media only screen and (min-width: 475px) {
+    #plus {
+    	text-indent: -1.9rem;
+    	background-position: 3.1rem 1.3rem;
+    } 
+}
+@media only screen and (min-width: 670px) {
+    .navList{
+    	flex-basis: 49%;
+    } 
+    #book {
+		text-indent: -8rem;
+        background-position: 7rem 1rem
+    }
+    #review{
+    	text-indent: -10.7rem;
+    	background-position: 7rem 1rem;
+    }
+     #plus {
+        text-indent: -7.9rem;
+    	background-position: 7.1rem 1.3rem;
+    } 
+}
+@media only screen and (min-width: 768px) {
+    .navList{
+    	flex-basis: 49%;
+    	padding-top: 0.5rem;
+    	padding-bottom: 0.5rem;
+    } 
+    #book {
+		text-indent: -15rem;
+    	background-position: 8rem 1rem;
+    }
+    #review{
+    	text-indent: -17.7rem;
+    	background-position: 8rem 1rem;
+    }
+     #plus {
+        text-indent: -14.9rem;
+    	background-position: 8.1rem 1.3rem;
+    } 
+    .card{
+    	flex-basis: 45%;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .navList{
+    	flex-basis: 49%;
+    	padding-top: 0.5rem;
+    	padding-bottom: 0.5rem;
+    } 
+    #book {
+		text-indent: -24rem;
+    	background-position: 10rem 1rem
+    }
+    #review{
+    	text-indent: -26.7rem;
+    	background-position: 10rem 1rem;
+    }
+     #plus {
+        text-indent: -23.9rem;
+    	background-position: 10.1rem 1.3rem;
+    } 
+    .card{
+    	flex-basis: 30%;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .navList{
+    	flex-basis: 23%;
+	    padding-top: 1.5rem;
+	    padding-bottom: 1.5rem;
+    } 
+    .navList li{
+    	flex-basis: 16%;
+    } 
+    .searchBox{
+    	width: 35%;
+    }
+    .details{
+    	margin-left: 15rem;
+    }
+    #book {
+	    text-indent: -40rem;
+    	background-position: 9rem 1rem;
+    }
+    #review{
+    	text-indent: -42.7rem;
+    	background-position: 9rem 1rem;
+    }
+     #plus {
+        text-indent: -39.9rem;
+    	background-position: 9.1rem 1.3rem;
+    } 
+    .card{
+    	flex-basis: 22%;
+    }
+}
+@media only screen and (min-width: 1679px) {
+    .navList{
+    	flex-basis: 32.9%;
+	    padding-top: 1.5rem;
+	    padding-bottom: 1.5rem;
+    } 
+    .navList li{
+    	flex-basis: 16%;
+    } 
+    .searchBox{
+    	width: 35%;
+    }
+    .details{
+    	margin-left: 15rem;
+    }
+    #book {
+	    text-indent: -40rem;
+    	background-position: 14rem 1rem;
+    }
+    #review{
+    	text-indent: -42.7rem;
+    	background-position: 14rem 1rem;
+    }
+     #plus {
+        text-indent: -39.9rem;
+    	background-position: 14.1rem 1.3rem;
+    } 
+    .card{
+    	flex-basis: 18%;
+    }
+}
+
+
+
+
+
